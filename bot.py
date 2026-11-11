@@ -1,19 +1,35 @@
 import asyncio
 from playwright.async_api import async_playwright, TimeoutError
 
-ANSWER = "C"
+ANSWER = "B"
 
 accounts = [
-    {"username":"sunny-1","wallet":"3HBrdGigUxi3FokCeV6VsY46E744GMgVJPZhg13NyfYf"},
-    {"username":"sunny-2","wallet":"GEVGkbE4v5vzNXoc1Fid2mBm6oCKq3mxQbE3w9HbfAEK"},
-    {"username":"sunny-3","wallet":"GpNNbBBLgoPaNNj6V5cWBFUhX43jjdE53VJijvPhFhsu"},
-    {"username":"sunny-4","wallet":"5cdLqMUwy5okG4aTBwsY6F2uFzSnjfRs3iY8GCrbJ9AT"},
-    {"username":"sunny-5","wallet":"DRZDT6rW5bZXvJFKrp31bkkS8RxMfx8ktXD381AnyeUq"},
-    {"username":"sunny-6","wallet":"CfjMTYs6A2MbDiokKBc5CWq8jbcy8iea7tsfw9D6N8Do"},
-    {"username":"sunny-7","wallet":"DB8r45ai2EgnuxKf13JqbpxrLPxxBF2eJACopC6Er1aH"},
-    {"username":"sunny-8","wallet":"8RwBhp2Q86SeSWqt8Y2vspR5LfqWmQCdu2wpUTM3cSXS"},
-    {"username":"sunny-9","wallet":"4q58evjqN3G6ura5t5rqptLPdDVjCFENFTpeGyR5uPnH"},
-    {"username":"sunny-10","wallet":"B1KVMqniFQ9dJJKxq9wvMXWW91zz8R5Q18TANJfbBVRq"},
+{"username": "MAS-51", "wallet": "BBvm2Ti9evzoE9mMhiUMTgQawPZoQ8ZU9DkJsi9ZKmur"},
+{"username": "MAS-52", "wallet": "29NBUTSyhBTDMQbCtSR8vtVCk5pZ2obyoXYzwBGiib5o"},
+{"username": "MAS-53", "wallet": "APPojTDJgxjHyEaGJRpUZtNNq3GawG5R5MWPUkfBxq6E"},
+{"username": "MAS-54", "wallet": "8HS4fD2iQCofdecNLpAaAe8QDyBAEqyDtfn2RH1UZYXg"},
+{"username": "MAS-55", "wallet": "HNRNLjKiHr8PwLLufJEoPqA37HspAQzTBPfC7SBTWGpP"},
+{"username": "MAS-56", "wallet": "AWQzA27wZCHmhwszaFrc2cGtLDVsT5k8u4w5ae6o6xCp"},
+{"username": "MAS-57", "wallet": "5fT67wZU8uaF4sySzhMNgiofz3UMuDta4R6r3MipJSH3"},
+{"username": "MAS-58", "wallet": "J3Tr3cLvfxnfCYgVGNPZGNuXSZdD4e2Govvu43EhX82D"},
+{"username": "MAS-59", "wallet": "5sbT5NETxXkfMKrRy8sB86ds1GWrrN7kys8eB9cCPNmj"},
+{"username": "MAS-60", "wallet": "ELCFKpXappiiKJGJeRHqmGFok1wt1gfZecQH67jhYBn1"},
+{"username": "MAS-61", "wallet": "DyZ2jbR2m2Wit97ss9i9YbyqbTQbLueEA1418MzH7oaR"},
+{"username": "MAS-62", "wallet": "2BbEtzMsf8Fd4JNySgWiZk3pQJtufvwE6wwyN3dEFPQ7"},
+{"username": "MAS-63", "wallet": "4CH6DTpaomx8Tx29Qi3MKU9HjBDbgafYKnDDXS6kr8SU"},
+{"username": "MAS-64", "wallet": "99R5PocKfFp5Ra6Q1tinTDL8SgWHgnatMnNU4LHdhxma"},
+{"username": "MAS-65", "wallet": "8kYcFMxJbJg4ZpXAZzDG2YxBwJH2jXxPEupgRk7Ms3gx"},
+{"username": "MAS-66", "wallet": "Gz9PdceqMAkZt9zkq7EHLwAxAkAJHGsmBcii6r8FxtGb"},
+{"username": "MAS-67", "wallet": "8HUBbirxJZb2YsTV5ACg9LSzRbvZuhuX3H86yxQZUbtj"},
+{"username": "MAS-68", "wallet": "3Q7nMnYGzk95eqKVWXM41i94nmeKCgzU58FMutESEfc4"},
+{"username": "MAS-69", "wallet": "Gry41UDDUikWfACx2PuVj16wcZyQXLNb7Bk44NKtobKR"},
+{"username": "MAS-70", "wallet": "8SghF3f3fXp6Ao8wmJTjYycWbjs6JK7nK9LtjpvRbv1Q"},
+{"username": "MAS-71", "wallet": "8Pr192ujAJUkofWN6xHXV6uPEB8hqaPb1xLPAeSZUNmJ"},
+{"username": "MAS-72", "wallet": "8vebivED3sGY55xB1RQsjPodfaAQstmN8sSzH18zN7XB"},
+{"username": "MAS-73", "wallet": "Dt4E2mqfCZtxVohTqycW9K9DgWTE8YuiNPrEg8Pc1ALJ"},
+{"username": "MAS-74", "wallet": "54tRNCQVScXxqCj3givZYTGXv9dbBTbRDhb5ZCNVMeot"},
+{"username": "MAS-75", "wallet": "p7pu5s2bAJpChrz7vDroHU4E4EGMzPRuxXunvj75e2Y"},
+
 ]
 
 async def handle_modal(page):
